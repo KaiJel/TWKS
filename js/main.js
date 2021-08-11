@@ -26,11 +26,17 @@ $(function(){
         $('h1').toggleClass('fix', headFix);
         //h1의 크기 변화
         if(sct > 0 && sct < 400 ) {
-            svg.css({width:`${100-sct/10*2.3}%`, height:`${100-sct/10*2.3}%`});
+            svg.css({
+                width:`${100-sct/10*2.3}%`,
+                height:`${100-sct/10*2.3}%`
+            });
         }
         //sct400이상에서 h1의 크기변화 유지
         if(sct>=400){
-            svg.css({width:`${100-400/10*2.3}%`, height:`${100-400/10*2.3}%`});
+            svg.css({
+                width:`${100-400/10*2.3}%`,
+                height:`${100-400/10*2.3}%`
+            });
         }
 
         //.scroll
@@ -92,9 +98,9 @@ $(function(){
         if( sct > 0 && sct < 600) {
             let wheel = e.originalEvent.wheelDelta;
             if(wheel>0){    //스크롤 올릴때
-            movie.css('width',`${parseInt(movW)-38}px`);
+                movie.css('width',`${parseInt(movW)-38}px`);
             } else {    //스크롤 내릴때
-            movie.css('width',`${parseInt(movW)+38}px`);
+                movie.css('width',`${parseInt(movW)+38}px`);
             }
         }
     });
